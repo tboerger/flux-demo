@@ -19,7 +19,7 @@ spec:
         namespace: default
   values:
     image:
-      repository: ghcr.io/stefanprodan/podinfo
+      repository: ${podinfoRepo}
       tag: 6.8.0 # {"$imagepolicy": "default:podinfo:tag"}
 
     service:

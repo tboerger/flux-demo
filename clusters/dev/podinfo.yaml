@@ -21,4 +21,8 @@ spec:
   prune: true
   wait: true
 
+  postBuild:
+    substitute:
+      podinfoRepo: ghcr.io/stefanprodan/podinfo
+
 ...
