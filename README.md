@@ -17,10 +17,12 @@ flux bootstrap github \
     --author-name="Thomas Boerger" \
     --owner=tboerger \
     --repository=flux-demo \
+    --branch=master \
     --personal=true \
     --private=false \
     --read-write-key=true \
-    --path clusters/dev
+    --path clusters/dev \
+    --components-extra=image-reflector-controller,image-automation-controller
 ```
 
 ## Cleanup
