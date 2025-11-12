@@ -1,0 +1,25 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+
+metadata:
+  name: imageupdate
+  namespace: flux-system
+
+spec:
+  interval: 1m
+  retryInterval: 1m
+  timeout: 5m
+
+  dependsOn:
+    - name: podinfo
+
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+
+  path: ./applications/dev/imageupdate
+  prune: true
+  wait: true
+
+...

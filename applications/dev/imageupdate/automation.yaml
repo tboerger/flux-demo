@@ -1,0 +1,27 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1
+kind: ImageUpdateAutomation
+
+metadata:
+  name: podinfo
+  namespace: default
+
+spec:
+  interval: 30m
+
+  sourceRef:
+    kind: GitRepository
+    name: TODO
+
+  git:
+    push:
+      branch: master
+    commit:
+      author:
+        email: flux@webhippie.de
+        name: Flux
+
+  update:
+    path: ./applications/dev
+
+...
