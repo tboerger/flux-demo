@@ -12,6 +12,6 @@ spec:
 
   policy:
     semver:
-      range: 6.8.x
+      range: 6.9.x
 
 ...
