@@ -1,11 +1,8 @@
----
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
-
 metadata:
   name: podinfo
   namespace: default
-
 # https://github.com/stefanprodan/podinfo/tree/master/charts/podinfo
 spec:
   interval: 30m
@@ -20,10 +17,7 @@ spec:
   values:
     image:
       repository: ${podinfoRepo}
-      tag: 6.8.0 # {"$imagepolicy": "default:podinfo:tag"}
-
+      tag: 6.9.2 # {"$imagepolicy": "default:podinfo:tag"}
     service:
       enabled: true
       type: NodePort
-
-...
